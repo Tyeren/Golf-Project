@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+</head>
+<body onload="getCourseInfo(11819)">
+
+<div onload="getCourseInfo()" id="overlaycontainer">
+    <div id="contentdiv">
+
+
+        <div id="golfbanner">
+            <div class="blackbar">
+                <div class="barleft">
+                    <div id="golflogo"></div>
+                    <div id="logotext">Golf Score Card</div>
+                </div>
+                <div class="barright">
+                    <div class="weatherContainer">
+                    <div id="weather"><button onclick="getmyinfo()">Weather</button></div>
+                    <div id="myNewDiv"></div>
+                    <div id="windSpeed"></div>
+                    <div id="windDirection"></div>
+                    <div id="temperature"></div>
+                    <div id="humidity"></div>
+                    <img id="weatherImage">
+                    <div id="countdown"></div>
+                        </div>
+                </div>
+            </div>
+            <div id="golfcourselabel"></div>
+        </div>
+        <div id="scorecard">
+            <select id="teeboxes"></select>
+            <div>Player Count
+
+                <select id="playerCount" oninput="setCourseInfo();" >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div>Hole Count
+            <select id="holeCount" oninput="setCourseInfo()" >
+                <option value="9">Front 9</option>
+                <option value="9">Back 9</option>
+                <option value="18">Full 18</option>
+            </select>
+            </div>
+            <div id="leftcard"></div>
+            <div id="rightcard"></div>
+
+
+        </div>
+    </div>
+</div>
+
+<div id="container"></div>
+
+<script src="java.js"></script>
+
+</body>
+</html>
